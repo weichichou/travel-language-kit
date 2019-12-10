@@ -34,13 +34,22 @@ export default class Allergy extends React.Component {
         msg.lang='nl'
         window.speechSynthesis.speak(msg)
     }
+
+    handleAllergy = (event) => {
+        let msg = new SpeechSynthesisUtterance(`Ik ben allergisch voor ${this.state.translatedText}`)
+        msg.lang='nl'
+        window.speechSynthesis.speak(msg)
+    }
     
     render(){
+        let allergyItem = '...'
+        this.state.translatedText ? allergyItem = this.state.translatedText : allergyItem = '...'
+        
         return (
             <div className="card card-body">
                 <button className='btn btn-outline-secondary btn-lg btn-block' onClick={this.handleVeg}>Is it vegetarian?</button>
                 <button className='btn btn-outline-secondary btn-lg btn-block' onClick={this.handleGlutenFree}>Is it gluten-free?</button>
-
+                <button className='btn btn-outline-secondary btn-lg btn-block' onClick={this.handleAllergy}>{`I am allergic to ${allergyItem}`}</button>
                 <form className='form-inline' onSubmit={this.handleSubmit}>
                 {/* <div className="form-group"> */}
                     {/* <label>Item</label> */}
@@ -48,7 +57,7 @@ export default class Allergy extends React.Component {
                         value={this.state.originalText} type="text" className="form-control" 
                         placeholder="Item that you're allergic to" required />
                 {/* </div> */}
-                <button type="submit" className="btn btn-secondary">Submit</button>
+                <button type="submit" className="btn btn-secondary">Customize your sentence</button>
             </form>
 
             </div>)
