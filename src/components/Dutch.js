@@ -1,9 +1,9 @@
 import React from "react"
+import '../App.css'
 
 export default class Dutch extends React.Component {
     state = {
-        item: '',
-        sentence: ''
+        item: ''
     }
 
     handleClick = (event) => {
@@ -46,32 +46,35 @@ export default class Dutch extends React.Component {
 
 
     render(){
-        return(<div>
-            <h1>Dutch Food</h1>
+        const btnInBtnDiv = 'btn btn-dark btn-lg'
+        const btnInCard = 'btn btn-outline-secondary btn-lg btn-block'
+
+        return(<div className='display-div'>
+            <h1>Travel Language Kit</h1>
             {this.state.item !== '' &&
             <div className='custom-sentence'>
                 <h4>Useful Sentences:</h4>
 
                 <div className='button-div'>
-                    <button className="btn btn-info" 
+                    <button className={btnInBtnDiv} 
                         type="button" data-toggle="collapse" 
                         data-target="#collapseOrder"
                         aria-expanded="false" aria-controls="collapseOrder">
                         Order
                     </button>
-                    <button className='btn btn-info'
+                    <button className={btnInBtnDiv}
                         type="button" data-toggle="collapse" 
                         data-target="#collapsePayment"
                         aria-expanded="false" aria-controls="collapsePayment">
                         Payment
                     </button>
-                    <button className='btn btn-info'
+                    <button className={btnInBtnDiv}
                         type="button" data-toggle="collapse" 
                         data-target="#collapseAllergy"
                         aria-expanded="false" aria-controls="collapseAllergy">
                         Allergy
                     </button>
-                    <button className='btn btn-info'
+                    <button className={btnInBtnDiv}
                         type="button" data-toggle="collapse" 
                         data-target="#collapseComment"
                         aria-expanded="false" aria-controls="collapseComment">
@@ -82,21 +85,21 @@ export default class Dutch extends React.Component {
                     
                 <div className="collapse" id="collapseOrder">
                     <div className="card card-body">
-                        <button onClick={this.handleOrder}>{`I'd like a ${this.state.item}`}</button>
-                        <button onClick={this.handlePrice}>{`How much is a ${this.state.item}?`}</button>
+                        <button className={btnInCard} onClick={this.handleOrder}>{`I'd like a ${this.state.item}`}</button>
+                        <button className={btnInCard} onClick={this.handlePrice}>{`How much is a ${this.state.item}?`}</button>
                     </div>
                 </div>
                 
                 <div className="collapse" id="collapsePayment">
                     <div className="card card-body">
-                        <button onClick={this.handleCard}>Can I pay by card?</button>
-                        <button onClick={this.handleCash}>Can I pay in cash?</button>
+                        <button className={btnInCard} onClick={this.handleCard}>Can I pay by card?</button>
+                        <button className={btnInCard} onClick={this.handleCash}>Can I pay in cash?</button>
                     </div>
                 </div>
 
                 <div className="collapse" id="collapseComment">
                     <div className='card card-body'>
-                        <button onClick={this.handleComment}>{`The best ${this.state.item} I've ever had!`}</button> 
+                        <button className={btnInCard} onClick={this.handleComment}>{`The best ${this.state.item} I've ever had!`}</button> 
                     </div>
                 </div>
                 
@@ -106,12 +109,13 @@ export default class Dutch extends React.Component {
             <div className='item-display'>
                 <img onClick={this.handleClick} src='/images/Stamppot.jpg' alt='stamppot'/>
                 <img onClick={this.handleClick} src='/images/Haring.jpg' alt='haring'/> 
+                <img onClick={this.handleClick} src='/images/Pannenkoek.jpg' alt='pannenkoek'/>
                 <img onClick={this.handleClick} src='/images/Patat.jpg' alt='patat'/> 
                 <img onClick={this.handleClick} src='/images/Bitterballen.jpg' alt='bitterballen'/>
                 <img onClick={this.handleClick} src='/images/Stroopwafel.jpg' alt='stroopwafel'/>
                 <img onClick={this.handleClick} src='/images/Hagelslag.jpg' alt='hagelslag'/>
                 <img onClick={this.handleClick} src='/images/Oliebollen.jpg' alt='oliebollen'/>
-                <img onClick={this.handleClick} src='/images/Pannenkoek.jpg' alt='pannenkoek'/>
+                
               
             </div>
         </div>)

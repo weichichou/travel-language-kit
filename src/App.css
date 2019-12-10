@@ -1,3 +1,17 @@
+.button-div button {
+  margin: 0.5rem;
+}
+
+.display-div {
+  color: white;
+  background-color: black;
+}
+
+.card-body {
+  background-color: black;
+}
+
+/* Default from React */
 .App {
   text-align: center;
 }
