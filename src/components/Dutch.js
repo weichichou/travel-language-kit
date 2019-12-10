@@ -15,7 +15,6 @@ export default class Dutch extends React.Component {
     }
 
     handleOrder = (event) => {
-        this.setState({sentence: event.target.id})
         let msg = new SpeechSynthesisUtterance(`Mag ik een ${this.state.item}, alsjeblieft`)
         msg.lang='nl'
         window.speechSynthesis.speak(msg)
@@ -52,32 +51,56 @@ export default class Dutch extends React.Component {
             {this.state.item !== '' &&
             <div className='custom-sentence'>
                 <h4>Useful Sentences:</h4>
-                
-                <div className='order dropdown'>
-                <button className="btn btn-secondary dropdown-toggle" 
-                    type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Order
-                 </button>
-                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <button className="dropdown-item" id={`I'd like a ${this.state.item}`}
-                        onClick={this.handleOrder}>{`I'd like a ${this.state.item}`}</button>
-                    <button className="dropdown-item" onClick={this.handlePrice}>{`How much is a ${this.state.item}?`}</button>
-                </div>
-                </div>
-                <div className='allergy'>
 
+                <div className='button-div'>
+                    <button className="btn btn-info" 
+                        type="button" data-toggle="collapse" 
+                        data-target="#collapseOrder"
+                        aria-expanded="false" aria-controls="collapseOrder">
+                        Order
+                    </button>
+                    <button className='btn btn-info'
+                        type="button" data-toggle="collapse" 
+                        data-target="#collapsePayment"
+                        aria-expanded="false" aria-controls="collapsePayment">
+                        Payment
+                    </button>
+                    <button className='btn btn-info'
+                        type="button" data-toggle="collapse" 
+                        data-target="#collapseAllergy"
+                        aria-expanded="false" aria-controls="collapseAllergy">
+                        Allergy
+                    </button>
+                    <button className='btn btn-info'
+                        type="button" data-toggle="collapse" 
+                        data-target="#collapseComment"
+                        aria-expanded="false" aria-controls="collapseComment">
+                        Comment
+                    </button>
                 </div>
-                <div className='payment'>
-                    <button onClick={this.handleCard}>Can I pay by card?</button>
-                    <button onClick={this.handleCash}>Can I pay in cash?</button>
+                
+                    
+                <div className="collapse" id="collapseOrder">
+                    <div className="card card-body">
+                        <button onClick={this.handleOrder}>{`I'd like a ${this.state.item}`}</button>
+                        <button onClick={this.handlePrice}>{`How much is a ${this.state.item}?`}</button>
+                    </div>
                 </div>
-                <div className='polite'>
-                    <button onClick={this.handleComment}>{`The best ${this.state.item} I've ever had!`}</button> 
+                
+                <div className="collapse" id="collapsePayment">
+                    <div className="card card-body">
+                        <button onClick={this.handleCard}>Can I pay by card?</button>
+                        <button onClick={this.handleCash}>Can I pay in cash?</button>
+                    </div>
                 </div>
 
-                {/*Show the customized sentence*/}
-                <h5>{this.state.sentence}</h5>
+                <div className="collapse" id="collapseComment">
+                    <div className='card card-body'>
+                        <button onClick={this.handleComment}>{`The best ${this.state.item} I've ever had!`}</button> 
+                    </div>
+                </div>
                 
+
             </div>}
 
             <div className='item-display'>
