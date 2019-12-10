@@ -17,6 +17,11 @@
 
 .form-inline label {
   margin-right: 0.5rem;
+  font-size: 20px;
+}
+
+.form-inline input {
+  font-size: 20px;
 }
 
 /* Default from React */
