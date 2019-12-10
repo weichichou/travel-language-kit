@@ -1,3 +1,22 @@
+.header-div {
+  color: white;
+  background-color: black;
+  position: sticky;
+  top: 0;
+}
+
+.sticky-top {
+  position: sticky !important;
+  top: 111px !important;
+  background-color: black;
+  padding-bottom: 1rem;
+}
+
+.header-div h1 {
+  margin: 0;
+  padding: 2rem;
+}
+
 .button-div button {
   margin: 0.5rem;
 }

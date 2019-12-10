@@ -51,10 +51,11 @@ export default class Dutch extends React.Component {
         const btnInCard = 'btn btn-outline-secondary btn-lg btn-block'
 
         return(<div className='display-div'>
-            <h1>Travel Language Kit</h1>
+            
+            {this.state.item === '' && <h5 className='sticky-top'>Pick an item and start the conversation!</h5>}
+
             {this.state.item !== '' &&
-            <div className='custom-sentence'>
-                <h4>Useful Sentences:</h4>
+            <div className='sticky-top'>
 
                 <div className='button-div'>
                     <button className={btnInBtnDiv} 
