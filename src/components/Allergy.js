@@ -16,11 +16,6 @@ export default class Allergy extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        let text = this.state.originalText
-        
-        googleTranslate.translate(text, 'nl', (err, translation)=> {
-            this.setState({translatedText: translation.translatedText})
-        })
     }
 
     handleVeg = (event) => {
@@ -36,29 +31,37 @@ export default class Allergy extends React.Component {
     }
 
     handleAllergy = (event) => {
-        let msg = new SpeechSynthesisUtterance(`Ik ben allergisch voor ${this.state.translatedText}`)
-        msg.lang='nl'
-        window.speechSynthesis.speak(msg)
-    }
+        
+        googleTranslate.translate(event.target.id, 'nl', (err, translation)=> {
+            this.setState(
+                {translatedText: translation.translatedText},
+                function(){
+                    let msg = new SpeechSynthesisUtterance(`Ik ben allergisch voor ${this.state.translatedText}`)
+                    msg.lang='nl'
+                    window.speechSynthesis.speak(msg)
+                }
+            )
+        })
+    } 
     
     render(){
-        let allergyItem = '...'
-        this.state.translatedText ? allergyItem = this.state.translatedText : allergyItem = '...'
+        let allergyItem = ''
+        this.state.originalText ? allergyItem = this.state.originalText : allergyItem = '......'
         
         return (
             <div className="card card-body">
                 <button className='btn btn-outline-secondary btn-lg btn-block' onClick={this.handleVeg}>Is it vegetarian?</button>
                 <button className='btn btn-outline-secondary btn-lg btn-block' onClick={this.handleGlutenFree}>Is it gluten-free?</button>
-                <button className='btn btn-outline-secondary btn-lg btn-block' onClick={this.handleAllergy}>{`I am allergic to ${allergyItem}`}</button>
+                
+                <button id={allergyItem} className='btn btn-outline-secondary btn-lg btn-block' 
+                onClick={this.handleAllergy}>{`I am allergic to ${allergyItem}`}</button> 
+
                 <form className='form-inline' onSubmit={this.handleSubmit}>
-                {/* <div className="form-group"> */}
-                    {/* <label>Item</label> */}
+                    <label>Customize your sentence: </label> 
                     <input onChange={this.handleChange} name='originalText' 
                         value={this.state.originalText} type="text" className="form-control" 
                         placeholder="Item that you're allergic to" required />
-                {/* </div> */}
-                <button type="submit" className="btn btn-secondary">Customize your sentence</button>
-            </form>
+                </form>
 
             </div>)
     }
