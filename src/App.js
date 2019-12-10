@@ -4,6 +4,7 @@ import './App.css';
 import Test from './components/Test';
 import VoiceTest from './components/VoiceTest';
 import Dutch from './components/Dutch';
+import Canvas from './components/Canvas';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       {/* <VoiceTest /> */}
 
       <Dutch />
+      <Canvas />
     </div>
   );
 }

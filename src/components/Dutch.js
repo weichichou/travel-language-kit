@@ -1,5 +1,6 @@
 import React from "react"
 import '../App.css'
+import Allergy from "./Allergy"
 
 export default class Dutch extends React.Component {
     state = {
@@ -95,6 +96,10 @@ export default class Dutch extends React.Component {
                         <button className={btnInCard} onClick={this.handleCard}>Can I pay by card?</button>
                         <button className={btnInCard} onClick={this.handleCash}>Can I pay in cash?</button>
                     </div>
+                </div>
+
+                <div className="collapse" id="collapseAllergy">
+                    <Allergy />
                 </div>
 
                 <div className="collapse" id="collapseComment">
