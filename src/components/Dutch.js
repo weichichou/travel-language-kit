@@ -39,11 +39,11 @@ export default class Dutch extends React.Component {
         window.speechSynthesis.speak(msg)
     }
 
-    handleComment = (event) => {
-        let msg = new SpeechSynthesisUtterance(`Lekkerste ${this.state.item} wat ik ooit heb gehad!`)
+    /* handleComment = (event) => {
+        let msg = new SpeechSynthesisUtterance(`Beste ${this.state.item} wat ik ooit heb gehad!`)
         msg.lang='nl'
         window.speechSynthesis.speak(msg)
-    }
+    } */
 
 
     render(){
@@ -52,7 +52,7 @@ export default class Dutch extends React.Component {
 
         return(<div className='display-div'>
             
-            {this.state.item === '' && <h5 className='sticky-top'>Pick an item and start the conversation!</h5>}
+            {this.state.item === '' && <p className='sticky-top'>Pick an item and start the conversation!</p>}
 
             {this.state.item !== '' &&
             <div className='sticky-top'>
@@ -76,12 +76,12 @@ export default class Dutch extends React.Component {
                         aria-expanded="false" aria-controls="collapseAllergy">
                         Allergy
                     </button>
-                    <button className={btnInBtnDiv}
+                    {/* <button className={btnInBtnDiv}
                         type="button" data-toggle="collapse" 
                         data-target="#collapseComment"
                         aria-expanded="false" aria-controls="collapseComment">
                         Comment
-                    </button>
+                    </button> */}
                 </div>
                 
                     
@@ -105,7 +105,7 @@ export default class Dutch extends React.Component {
 
                 <div className="collapse" id="collapseComment">
                     <div className='card card-body'>
-                        <button className={btnInCard} onClick={this.handleComment}>{`The best ${this.state.item} I've ever had!`}</button> 
+                        <button className={btnInCard} onClick={this.handleComment}>{`Best ${this.state.item} I've ever had!`}</button> 
                     </div>
                 </div>
                 
