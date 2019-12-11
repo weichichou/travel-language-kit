@@ -1,3 +1,53 @@
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container div {
+  margin: 0.5rem;
+}
+
+.container div img {
+  border-radius: 15%;
+}
+
+img:hover {
+  cursor: pointer;
+  filter: drop-shadow(-15px -15px 20px pink);
+}
+
+img:active {
+  filter: drop-shadow(-15px -15px 20px pink);
+}
+
+/* .current-img {
+  filter: drop-shadow(-15px -15px 20px pink);
+} */
+
+.food-display {
+  color: white;
+  margin-top: 2rem;
+}
+
+.allergy-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.allergy-div button {
+  height: 47.98px;
+}
+
+.collapse {
+  width: 80vw;
+  margin: 0 auto;
+}
+
 .header-div {
   color: white;
   background-color: black;

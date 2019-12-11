@@ -1,0 +1,5 @@
+[{
+    "text": "How much is ITEM?"
+}, {}]
+
+// 先做string replace (把ITEM replace掉)，再丟翻譯，再做語音

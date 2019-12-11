@@ -39,6 +39,12 @@ export default class Dutch extends React.Component {
         window.speechSynthesis.speak(msg)
     }
 
+    readSentence = (sentence) => {
+        let msg = new SpeechSynthesisUtterance(sentence)
+        msg.lang='zh-TW'
+        window.speechSynthesis.speak(msg) 
+    }
+
     /* handleComment = (event) => {
         let msg = new SpeechSynthesisUtterance(`Beste ${this.state.item} wat ik ooit heb gehad!`)
         msg.lang='nl'
@@ -49,6 +55,8 @@ export default class Dutch extends React.Component {
     render(){
         const btnInBtnDiv = 'btn btn-dark btn-lg'
         const btnInCard = 'btn btn-outline-secondary btn-lg btn-block'
+
+        const greeting = '芒果冰'
 
         return(<div className='display-div'>
             
@@ -76,12 +84,6 @@ export default class Dutch extends React.Component {
                         aria-expanded="false" aria-controls="collapseAllergy">
                         Allergy
                     </button>
-                    {/* <button className={btnInBtnDiv}
-                        type="button" data-toggle="collapse" 
-                        data-target="#collapseComment"
-                        aria-expanded="false" aria-controls="collapseComment">
-                        Comment
-                    </button> */}
                 </div>
                 
                     
@@ -96,6 +98,13 @@ export default class Dutch extends React.Component {
                     <div className="card card-body">
                         <button className={btnInCard} onClick={this.handleCard}>Can I pay by card?</button>
                         <button className={btnInCard} onClick={this.handleCash}>Can I pay in cash?</button>
+
+                        {/* For testing */}
+
+                        <button className={btnInCard} 
+                        onClick={()=>{this.readSentence(greeting)}}>
+                            {greeting}
+                        </button>
                     </div>
                 </div>
 
