@@ -62,6 +62,31 @@ img:active {
   padding-bottom: 1rem;
 }
 
+.sticky-bottom {
+  padding: 2rem;
+  background-color: black;
+  position: sticky; 
+  bottom: 0;
+  color: white;
+  font-size: 20px;
+}
+
+.sticky-bottom div {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.sticky-bottom button {
+  margin-left: 1rem;
+}
+
+/* .sticky-bottom div {
+  border-style: dashed solid; 
+  color: white;
+  font-size: 20px;
+} */
+
 p {
   font-size: 20px;
 }

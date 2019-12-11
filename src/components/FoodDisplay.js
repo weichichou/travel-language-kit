@@ -12,7 +12,8 @@ export default class FoodDisplay extends React.Component {
         // region: 'ja',
         // region: 'nl', 
         originalText: '',
-        translatedText: ''
+        translatedText: '',
+        showBottomDiv: false,
     }
 
     handleSubmit = (event) => {
@@ -182,7 +183,20 @@ export default class FoodDisplay extends React.Component {
                     {localOutput}
                 </div>
             </div>
+            <div className='sticky-bottom'>
 
+                {this.state.showBottomDiv === false && 
+                <button className={btnInBtnDiv} 
+                        onClick={()=>{this.setState({showBottomDiv: true})}}>Show Translated Text</button>}
+                    
+                {this.state.showBottomDiv === true && 
+                <div>
+                    <p>{this.state.translatedText}</p>
+                    <button className={btnInBtnDiv} 
+                            onClick={()=>{this.setState({showBottomDiv: false})}}>Hide</button>
+                </div>}
+                    
+            </div>
         </div>)
     }
 }
