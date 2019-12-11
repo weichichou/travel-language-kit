@@ -84,12 +84,6 @@ export default class Dutch extends React.Component {
                         aria-expanded="false" aria-controls="collapseAllergy">
                         Allergy
                     </button>
-                    {/* <button className={btnInBtnDiv}
-                        type="button" data-toggle="collapse" 
-                        data-target="#collapseComment"
-                        aria-expanded="false" aria-controls="collapseComment">
-                        Comment
-                    </button> */}
                 </div>
                 
                     
