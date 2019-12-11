@@ -8,8 +8,8 @@ import '../App.css'
 export default class FoodDisplay extends React.Component {
     state = {
         item: '',
-        // region: 'zh-TW',
-        region: 'ja',
+        region: 'zh-TW',
+        // region: 'ja',
         // region: 'nl', 
         originalText: '',
         translatedText: ''
@@ -29,7 +29,8 @@ export default class FoodDisplay extends React.Component {
         this.setState({
             item: event.target.alt
         })
-        console.log('event.target', event.target)
+        this.translate(event.target.alt)
+        // console.log('event.target', event.target)
         // event.target.className = 'current-img'
     }
 
@@ -46,9 +47,9 @@ export default class FoodDisplay extends React.Component {
         this.translate(sentence)
     }
 
-    translate = (sentence) => {
+    translate = (input) => {
         let region = this.state.region
-        googleTranslate.translate(sentence, region, (err, translation) => {
+        googleTranslate.translate(input, region, (err, translation) => {
             this.setState(
                 {translatedText: translation.translatedText},
                 function(){

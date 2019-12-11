@@ -16,15 +16,16 @@
 
 img:hover {
   cursor: pointer;
+  filter: drop-shadow(-15px -15px 20px pink);
 }
 
 img:active {
   filter: drop-shadow(-15px -15px 20px pink);
 }
 
-.current-img {
+/* .current-img {
   filter: drop-shadow(-15px -15px 20px pink);
-}
+} */
 
 .food-display {
   color: white;
