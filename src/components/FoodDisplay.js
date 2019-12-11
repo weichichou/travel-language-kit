@@ -8,8 +8,8 @@ import '../App.css'
 export default class FoodDisplay extends React.Component {
     state = {
         item: '',
-        // region: 'zh-TW',
-        region: 'ja',
+        region: 'zh-TW',
+        // region: 'ja',
         // region: 'nl', 
         originalText: '',
         translatedText: '',

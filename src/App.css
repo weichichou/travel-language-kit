@@ -127,14 +127,16 @@ p {
 .form-inline input {
   font-size: 20px;
 }
-div {
-  background-color: black;
-}
 
 .canvas-div .canvas-drawing-div {
   margin-left: auto;
   margin-right: auto;
 }
+
+.canvas-div button {
+  margin: 0.5rem;
+}
+
 
 /* Default from React */
 .App {

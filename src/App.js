@@ -23,6 +23,7 @@ class App extends React.Component {
                 <i class="fas fa-globe-asia"></i>
             </button>
         </div>
+        
         <Route path='/' exact component={FoodDisplay} />
         <Route path='/canvas' component={Canvas} />
     </div>
