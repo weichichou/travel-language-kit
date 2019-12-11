@@ -8,8 +8,8 @@ import '../App.css'
 export default class FoodDisplay extends React.Component {
     state = {
         item: '',
-        region: 'zh-TW',
-        // region: 'ja',
+        // region: 'zh-TW',
+        region: 'ja',
         // region: 'nl', 
         originalText: '',
         translatedText: '',
@@ -50,7 +50,7 @@ export default class FoodDisplay extends React.Component {
 
     translate = (input) => {
         let region = this.state.region
-        googleTranslate.translate(input, region, (err, translation) => {
+        googleTranslate.translate(input, 'en', region, (err, translation) => {
             this.setState(
                 {translatedText: translation.translatedText},
                 function(){
