@@ -9,7 +9,8 @@ export default class FoodDisplay extends React.Component {
     state = {
         item: '',
         // region: 'zh-TW',
-        region: 'nl', 
+        region: 'ja',
+        // region: 'nl', 
         originalText: '',
         translatedText: ''
     }
@@ -166,7 +167,7 @@ export default class FoodDisplay extends React.Component {
                 </div>
             </div>
             </div>
-            
+
             <div className='food-display'>
                 <h3>General Food</h3>
                 <div className='container'>

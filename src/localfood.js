@@ -39,5 +39,26 @@ export const local = [
         "region": "zh-TW",
         "name": "mango ice",
         "imgUrl": "images/mango-ice2.jpg"
+    },
+    {
+        "region": "ja",
+        "name": "matcha tea",
+        "imgUrl": "images/Matcha.jpg"
+    }, {
+        "region": "ja",
+        "name": "sushi",
+        "imgUrl": "images/sushi.jpg"
+    }, {
+        "region": "ja",
+        "name": "sashimi",
+        "imgUrl": "images/sashimi.jpg"
+    }, {
+        "region": "ja",
+        "name": "ramen",
+        "imgUrl": "images/ramen.jpg"
+    }, {
+        "region": "ja",
+        "name": "bento",
+        "imgUrl": "images/bento.jpg"
     } 
 ]
