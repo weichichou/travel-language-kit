@@ -8,7 +8,7 @@ import '../App.css'
 export default class FoodDisplay extends React.Component {
     state = {
         item: '',
-        region: 'zh-TW',
+        // region: 'zh-TW',
         // region: 'ja',
         // region: 'nl', 
         originalText: '',
@@ -49,7 +49,7 @@ export default class FoodDisplay extends React.Component {
     }
 
     translate = (input) => {
-        let region = this.state.region
+        let region = this.props.region
         googleTranslate.translate(input, 'en', region, (err, translation) => {
             this.setState(
                 {translatedText: translation.translatedText},
@@ -76,7 +76,7 @@ export default class FoodDisplay extends React.Component {
         })
 
         const localOutput = local
-            .filter(item => item.region === this.state.region)
+            .filter(item => item.region === this.props.region)
             .map((item)=>{
             return <div key={item.name}>
                 <img className='' 

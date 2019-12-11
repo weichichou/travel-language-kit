@@ -7,28 +7,34 @@ import Canvas from './components/Canvas';
 import FoodDisplay from './components/FoodDisplay';
 
 class App extends React.Component {  
-  render(){
-    return (<Router>
-    <div className="App">
-        <div className='header-div'>
-            <Link to='/canvas'>
-            <button className='btn btn-dark btn-lg'>
-                <i class="fas fa-paint-brush"></i>
-            </button>
-            </Link>
+    state = {
+        region: 'nl'
+    }
 
-            <h1>Travel Language Kit</h1>
+    render(){
+        return (<Router>
+        <div className="App">
+            <div className='header-div'>
+                <Link to='/canvas'>
+                <button className='btn btn-dark btn-lg'>
+                    <i class="fas fa-paint-brush"></i>
+                </button>
+                </Link>
 
-            <button className='btn btn-dark btn-lg'>
-                <i class="fas fa-globe-asia"></i>
-            </button>
+                <h1>Travel Language Kit</h1>
+
+                <button className='btn btn-dark btn-lg'>
+                    <i class="fas fa-globe-asia"></i>
+                </button>
+            </div>
+            
+            <Route path='/' exact render={() => 
+                <FoodDisplay region={this.state.region}/>} 
+            />
+            <Route path='/canvas' component={Canvas} />
         </div>
-        
-        <Route path='/' exact component={FoodDisplay} />
-        <Route path='/canvas' component={Canvas} />
-    </div>
-    </Router>)
-  }
+        </Router>)
+    }
 }
 
 export default App;
