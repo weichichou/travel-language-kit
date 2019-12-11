@@ -13,12 +13,18 @@ export const sentences = [
         "text": "Can I pay by card?"
     }, {
         "id": 5,
+        "text": "Can I use this coupon?"
+    },{
+        "id": 6,
+        "text": "I need the receipt, please."
+    },{
+        "id": 7,
         "text": "Is it vegetarian?"
     }, {
-        "id": 6,
+        "id": 8,
         "text": "Is it gluten-free?"
     }, {
-        "id": 7,
+        "id": 9,
         "text": "I'm allergic to ITEM." 
     }
 ]

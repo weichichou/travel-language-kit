@@ -34,7 +34,7 @@ export default class FoodDisplay extends React.Component {
     }
 
     customizeSentence = () => {
-        const text = sentences[6].text
+        const text = sentences[8].text
         const sentence = text.replace('ITEM', this.state.originalText)
         this.translate(sentence)
     }
@@ -110,17 +110,25 @@ export default class FoodDisplay extends React.Component {
                             onClick={()=>{this.makeSentence(3)}}>
                             Pay by card
                     </button>
+                    <button className={btnInCard}
+                            onClick={()=>{this.makeSentence(4)}}>
+                            Use coupon
+                    </button>
+                    <button className={btnInCard}
+                            onClick={()=>{this.makeSentence(5)}}>
+                            Ask for receipt
+                    </button>
                 </div>
             </div>
 
             <div className="collapse" id="collapseAllergy">
                 <div className="card card-body">
                     <button className={btnInCard}
-                            onClick={()=>{this.makeSentence(4)}}>
+                            onClick={()=>{this.makeSentence(6)}}>
                             Vegetarian
                     </button>
                     <button className={btnInCard}
-                            onClick={()=>{this.makeSentence(5)}}>
+                            onClick={()=>{this.makeSentence(7)}}>
                             Gluten-free
                     </button>
 
