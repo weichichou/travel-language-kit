@@ -1,13 +1,15 @@
 import React from "react"
 import { googleTranslate } from '../utils/googleTranslate'
 import { general } from '../generalfood'
+import { local } from '../localfood'
 import { sentences } from '../sentences'
 import '../App.css'
 
 export default class FoodDisplay extends React.Component {
     state = {
         item: '',
-        region: 'nl',
+        // region: 'zh-TW',
+        region: 'nl', 
         originalText: '',
         translatedText: ''
     }
@@ -23,7 +25,11 @@ export default class FoodDisplay extends React.Component {
     }
 
     handleClick = (event) => {
-        this.setState({item: event.target.alt})
+        this.setState({
+            item: event.target.alt
+        })
+        console.log('event.target', event.target)
+        // event.target.className = 'current-img'
     }
 
     makeSentence = (index) => {
@@ -33,8 +39,8 @@ export default class FoodDisplay extends React.Component {
         this.translate(sentence)
     }
 
-    customizeSentence = () => {
-        const text = sentences[8].text
+    customizeSentence = (index) => {
+        const text = sentences[index].text
         const sentence = text.replace('ITEM', this.state.originalText)
         this.translate(sentence)
     }
@@ -59,13 +65,26 @@ export default class FoodDisplay extends React.Component {
         
         const output = general.map((item)=>{
             return <div key={item.name}>
-                <img src={item.imgUrl} alt={item.name}
+                <img className='' 
+                src={item.imgUrl} alt={item.name}
+                height='150px' width='200px'
+                onClick={this.handleClick}/>
+            </div>
+        })
+
+        const localOutput = local
+            .filter(item => item.region === this.state.region)
+            .map((item)=>{
+            return <div key={item.name}>
+                <img className='' 
+                src={item.imgUrl} alt={item.name}
                 height='150px' width='200px'
                 onClick={this.handleClick}/>
             </div>
         })
 
         return (<div>
+            <div className='sticky-top'>
             <div className='button-div'>
                 <button className={btnInBtnDiv} 
                         type="button" data-toggle="collapse" 
@@ -134,7 +153,7 @@ export default class FoodDisplay extends React.Component {
 
                     <div className='allergy-div'>
                         <button className={btnInCard} 
-                                onClick={()=>{this.customizeSentence()}}>
+                                onClick={()=>{this.customizeSentence(8)}}>
                                 Allergic
                         </button> 
                         <form className='form-inline' 
@@ -146,7 +165,8 @@ export default class FoodDisplay extends React.Component {
                     </div>
                 </div>
             </div>
-
+            </div>
+            
             <div className='food-display'>
                 <h3>General Food</h3>
                 <div className='container'>
@@ -156,6 +176,9 @@ export default class FoodDisplay extends React.Component {
             
             <div className='food-display'>
                 <h3>Local Delicacies</h3>
+                <div className='container'>
+                    {localOutput}
+                </div>
             </div>
 
         </div>)

@@ -20,7 +20,7 @@ class App extends React.Component {
       <Header />
       <FoodDisplay />
       {/* <Dutch /> */}
-      <Canvas />
+      {/* <Canvas /> */}
     </div>
     )
   }
