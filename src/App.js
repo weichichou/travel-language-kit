@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 // import logo from './logo.svg';
 import './App.css';
 import Canvas from './components/Canvas';
@@ -7,13 +8,13 @@ import FoodDisplay from './components/FoodDisplay';
 
 class App extends React.Component {  
   render(){
-    return (
+    return (<Router>
     <div className="App">
       <Header />
-      <FoodDisplay />
-      {/* <Canvas /> */}
+      <Route path='/' exact component={FoodDisplay} />
+      <Route path='/canvas' component={Canvas} />
     </div>
-    )
+    </Router>)
   }
 }
 
