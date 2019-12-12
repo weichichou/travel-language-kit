@@ -27,6 +27,14 @@ img:active {
   filter: drop-shadow(-15px -15px 20px pink);
 } */
 
+.dropdown-item {
+  font-size: 18px;
+}
+
+.dropdown-item:hover {
+  background: linear-gradient(white, pink, pink, pink, white);
+}
+
 .food-display {
   color: white;
   margin-top: 2rem;
@@ -60,6 +68,8 @@ img:active {
   top: 111px !important;
   background-color: black;
   padding-bottom: 1rem;
+  width: 500px;
+  margin: 0 auto;
 }
 
 .sticky-bottom {
@@ -100,6 +110,11 @@ p {
 .header-div h1 {
   margin: 0;
   padding: 2rem;
+}
+
+.button-div {
+  width: 500px;
+  margin: 0 auto;
 }
 
 .button-div button {

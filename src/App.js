@@ -11,6 +11,14 @@ class App extends React.Component {
         region: 'nl'
     }
 
+    getLocation = () => {
+        navigator.geolocation.getCurrentPosition((position) => {
+          console.log(position)
+        }, (error) => {
+          console.error(error)
+        })
+    }
+
     render(){
         return (<Router>
         <div className="App">
@@ -22,12 +30,23 @@ class App extends React.Component {
                 </Link>
 
                 <h1>Travel Language Kit</h1>
-
-                <button className='btn btn-dark btn-lg'>
+                
+                <div className="dropdown">
+                <button className='btn btn-dark btn-lg dropdown-toggle' 
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        onClick={this.getLocation}>
                     <i class="fas fa-globe-asia"></i>
                 </button>
+                <div className="dropdown-menu dropdown-menu-right">
+                    <button className="dropdown-item">Get current location</button>
+                    <button className="dropdown-item">Choose from map</button>
+                    <div className="dropdown-divider"></div>
+                    <button className="dropdown-item disabled">Frequently visited</button>
+                    <button className="dropdown-item">Taiwan</button>
+                    <button className="dropdown-item">Japan</button>
+                </div>
+                </div>
             </div>
-            
             <Route path='/' exact render={() => 
                 <FoodDisplay region={this.state.region}/>} 
             />
