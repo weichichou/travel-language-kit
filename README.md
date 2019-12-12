@@ -26,7 +26,7 @@ The APP is designed for travellers in foreign countries to communicate with the 
 
 ### Locating
 
-- You can get the current location (detected by GPS).
+- You can get the current location (detected by Geolocation API).
 - You can choose a location from the map.
 - The targeted language for translation will be changed instantly based on the location you've chosen.
 
