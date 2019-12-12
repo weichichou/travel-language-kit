@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-// import logo from './logo.svg';
 import './App.css';
+import Map from 'pigeon-maps';
 import Canvas from './components/Canvas';
-// import Header from './components/Header';
 import FoodDisplay from './components/FoodDisplay';
 import { coordinates } from './coordinates'
 
 class App extends React.Component {  
     state = {
-        region: 'nl'
+        region: 'nl',
+        showMap: false
     }
 
     changeRegion = (event) => {
@@ -18,12 +18,15 @@ class App extends React.Component {
 
     getLocation = () => {
         navigator.geolocation.getCurrentPosition((position) => {
-          console.log(position)
-          const { coords } = position
-          this.coordsToCountry(coords.latitude, coords.longitude)  
+            const { coords } = position
+            this.coordsToCountry(coords.latitude, coords.longitude)  
         }, (error) => {
-          console.error(error)
+            console.error(error)
         })
+    }
+
+    chooseFromMap = ({ latLng }) => {
+        this.coordsToCountry(latLng[0], latLng[1])
     }
 
     coordsToCountry = (latitude, longitude) => {
@@ -56,14 +59,26 @@ class App extends React.Component {
                 </button>
                 <div className="dropdown-menu dropdown-menu-right">
                     <button onClick={this.getLocation} className="dropdown-item">Get current location</button>
-                    <button className="dropdown-item">Choose from map</button>
+                    
+                    <button onClick={()=>{this.setState({showMap: true})}}
+                            className="dropdown-item">Choose from map</button>
                     <div className="dropdown-divider"></div>
+                    
                     <button className="dropdown-item disabled">Frequently visited</button>
                     <button onClick={this.changeRegion} id='zh-TW' className="dropdown-item">Taiwan</button>
                     <button onClick={this.changeRegion} id='ja' className="dropdown-item">Japan</button>
                 </div>
                 </div>
             </div>
+
+            {this.state.showMap === true && 
+            <div>
+                <button onClick={()=>{this.setState({showMap: false})}}>Close</button>
+                <Map center={[52, 4]} zoom={3} width={600} height={400}
+                     onClick={this.chooseFromMap}>
+                </Map>
+            </div>}
+
             <Route path='/' exact render={() => 
                 <FoodDisplay region={this.state.region}/>} 
             />
