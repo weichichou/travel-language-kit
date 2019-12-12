@@ -59,6 +59,10 @@ img:focus {
   margin-top: 2rem;
 }
 
+.food-display h3 {
+  padding-top: 2rem;
+}
+
 .allergy-div {
   display: flex;
   flex-direction: row;
@@ -86,10 +90,13 @@ img:focus {
   position: sticky !important;
   top: 111px !important;
   background-color: black;
-  padding-bottom: 1rem;
+  /* background-color: #343a40; */
+  /* padding-bottom: 1rem;
+  padding-top: 1rem; */
   width: 700px;
   margin: 0 auto;
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0px 5px 30px 15px white;
 }
 
 .sticky-bottom {
@@ -144,6 +151,7 @@ p {
 .card-body {
   background-color: black;
   width: 700px;
+  border-radius: 1rem;
 }
 
 .form-inline {
