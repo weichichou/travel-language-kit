@@ -1,68 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Travel Language Kit 
 
-## Available Scripts
+## Introduction
 
-In the project directory, you can run:
+This is my project for Hackathon. 
+The APP is designed for travellers in foreign countries to communicate with the locals, especially when ordering or buying food.
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **[Technologies Used](#technologies-used)**
+- **[Main Functions](#main-functions)**
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React**
+- **Google Cloud Translation API**
+- **Web Speech API**
+- **Geolocation API**
+- **Pigeon Maps**
+- **React Canvas Draw**
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Main Functions
 
-### `npm run build`
+- **Translating**
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    You can point to a food image, and get the translation in both text and speech formats.
+    
+    You can choose from several frequently used sentences. (Ordering, asking for price, paying by card / in cash, etc.)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+    You can customize the sentences. For example, let the chef / shop owner know about your food allergy before ordering. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Locating**
 
-### `npm run eject`
+    You can get the current location (detected by GPS).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    You can choose a location from the map.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    The targeted language for translation will be changed instantly based on the location you've chosen.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **Drawing**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    You can also describe to the locals what you'd like to buy by drawing a picture.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
