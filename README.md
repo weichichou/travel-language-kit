@@ -22,15 +22,21 @@ The APP is designed for travellers in foreign countries to communicate with the 
 - You can choose from several frequently used sentences. (Ordering, asking for price, paying by card / in cash, etc.)
 - You can customize the sentences. For example, let the chef / shop owner know about your food allergy before ordering. 
 
+![translate](/demo/Peek-translate.gif)
+
 ### Locating
 
 - You can get the current location (detected by GPS).
 - You can choose a location from the map.
 - The targeted language for translation will be changed instantly based on the location you've chosen.
 
+![locate](/demo/Peek-locate.gif)
+
 ### Drawing
 
 - You can also describe to the locals what you'd like to buy by drawing a picture.
+
+![draw](/demo/Peek-draw.gif)
 
 ## Technologies Used
 
