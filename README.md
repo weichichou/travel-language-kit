@@ -37,5 +37,7 @@ The APP is designed for travellers in foreign countries to communicate with the 
 - Google Cloud Translation API
 - Web Speech API
 - Geolocation API
+- Pigeon Maps
+- React Canvas Draw
 
 This project was scaffolded using the create-react-app cli. [See the standard create-react-app docs](./create-react-app-docs.md).
