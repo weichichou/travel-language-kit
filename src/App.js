@@ -9,6 +9,7 @@ import { coordinates } from './coordinates'
 class App extends React.Component {  
     state = {
         region: 'nl',
+        name: 'The Netherlands',
         showMap: false
     }
 
@@ -37,7 +38,12 @@ class App extends React.Component {
             .find((element) => {
             return longitude >= element.longitude[0] && longitude <= element.longitude[1]
             })
-        this.setState({region: found.region})
+        if (found) {
+            this.setState({region: found.region, name: found.name}) 
+        }else{
+            window.alert('No data for this region yet.')
+        }
+            
     }
 
     render(){
@@ -72,9 +78,12 @@ class App extends React.Component {
             </div>
 
             {this.state.showMap === true && 
-            <div>
-                <button onClick={()=>{this.setState({showMap: false})}}>Close</button>
-                <Map center={[52, 4]} zoom={3} width={600} height={400}
+            <div className='map-div'>
+                <button onClick={()=>{this.setState({showMap: false})}} 
+                        className='btn btn-dark btn-lg'>Close
+                </button>
+                <p>{`Location: ${this.state.name}`}</p>
+                <Map center={[52, 4]} zoom={3.5} width={600} height={400}
                      onClick={this.chooseFromMap}>
                 </Map>
             </div>}
