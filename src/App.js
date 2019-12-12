@@ -5,6 +5,7 @@ import './App.css';
 import Canvas from './components/Canvas';
 // import Header from './components/Header';
 import FoodDisplay from './components/FoodDisplay';
+import { coordinates } from './coordinates'
 
 class App extends React.Component {  
     state = {
@@ -18,9 +19,22 @@ class App extends React.Component {
     getLocation = () => {
         navigator.geolocation.getCurrentPosition((position) => {
           console.log(position)
+          const { coords } = position
+          this.coordsToCountry(coords.latitude, coords.longitude)  
         }, (error) => {
           console.error(error)
         })
+    }
+
+    coordsToCountry = (latitude, longitude) => {
+        const found = coordinates
+            .filter((element) => {
+            return latitude >= element.latitude[0] && latitude <= element.latitude[1]
+            })
+            .find((element) => {
+            return longitude >= element.longitude[0] && longitude <= element.longitude[1]
+            })
+        this.setState({region: found.region})
     }
 
     render(){
@@ -29,7 +43,7 @@ class App extends React.Component {
             <div className='header-div'>
                 <Link to='/canvas'>
                 <button className='btn btn-dark btn-lg'>
-                    <i class="fas fa-paint-brush"></i>
+                    <i className="fas fa-paint-brush"></i>
                 </button>
                 </Link>
 
@@ -37,12 +51,11 @@ class App extends React.Component {
                 
                 <div className="dropdown">
                 <button className='btn btn-dark btn-lg dropdown-toggle' 
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                        onClick={this.getLocation}>
-                    <i class="fas fa-globe-asia"></i>
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i className="fas fa-globe-asia"></i>
                 </button>
                 <div className="dropdown-menu dropdown-menu-right">
-                    <button className="dropdown-item">Get current location</button>
+                    <button onClick={this.getLocation} className="dropdown-item">Get current location</button>
                     <button className="dropdown-item">Choose from map</button>
                     <div className="dropdown-divider"></div>
                     <button className="dropdown-item disabled">Frequently visited</button>
