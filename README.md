@@ -1,9 +1,9 @@
-# :steam_locomotive: Travel Language Kit  :ramen: 
+# :steam_locomotive: Travel Language Kit :ramen: 
 
 ## Introduction
 
 This is my project for Hackathon. 
-The APP is designed for travellers in foreign countries to communicate with the locals, especially when ordering or buying food.
+The APP is designed for travellers in foreign countries to communicate with the locals, especially when **ordering or buying food**. 
 
 ## Table of Contents
 
@@ -34,8 +34,8 @@ The APP is designed for travellers in foreign countries to communicate with the 
 
 ## Technologies Used
 
-- **Google Cloud Translation API**
-- **Web Speech API**
-- **Geolocation API**
+- Google Cloud Translation API
+- Web Speech API
+- Geolocation API
 
 This project was scaffolded using the create-react-app cli. [See the standard create-react-app docs](./create-react-app-docs.md).
