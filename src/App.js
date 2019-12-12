@@ -13,10 +13,6 @@ class App extends React.Component {
         showMap: false
     }
 
-    changeRegion = (event) => {
-        this.setState({region: event.target.id})
-    }
-
     getLocation = () => {
         navigator.geolocation.getCurrentPosition((position) => {
             const { coords } = position
@@ -41,9 +37,8 @@ class App extends React.Component {
         if (found) {
             this.setState({region: found.region, name: found.name}) 
         }else{
-            window.alert('No data for this region yet.')
-        }
-            
+            window.alert('Sorry, no data for this region yet.')
+        }    
     }
 
     render(){
@@ -71,8 +66,9 @@ class App extends React.Component {
                     <div className="dropdown-divider"></div>
                     
                     <button className="dropdown-item disabled">Frequently visited</button>
-                    <button onClick={this.changeRegion} id='zh-TW' className="dropdown-item">Taiwan</button>
-                    <button onClick={this.changeRegion} id='ja' className="dropdown-item">Japan</button>
+                    <button onClick={()=>{this.setState({region: 'zh-TW'})}} 
+                            id='zh-TW' className="dropdown-item">Taiwan
+                    </button>
                 </div>
                 </div>
             </div>

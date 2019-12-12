@@ -41,9 +41,10 @@ img:active {
   filter: drop-shadow(-15px -15px 20px pink);
 }
 
-/* .current-img {
+img:focus {
   filter: drop-shadow(-15px -15px 20px pink);
-} */
+  outline: 0;
+}
 
 .dropdown-item {
   font-size: 18px;
@@ -70,7 +71,7 @@ img:active {
 }
 
 .collapse {
-  width: 80vw;
+  width: 800px;
   margin: 0 auto;
 }
 
@@ -86,7 +87,7 @@ img:active {
   top: 111px !important;
   background-color: black;
   padding-bottom: 1rem;
-  width: 500px;
+  width: 700px;
   margin: 0 auto;
   border-radius: 0 0 1rem 1rem;
 }
@@ -110,12 +111,6 @@ img:active {
   margin-left: 1rem;
 }
 
-/* .sticky-bottom div {
-  border-style: dashed solid; 
-  color: white;
-  font-size: 20px;
-} */
-
 p {
   font-size: 20px;
 }
@@ -132,7 +127,7 @@ p {
 }
 
 .button-div {
-  width: 500px;
+  width: 700px;
   margin: 0 auto;
   border-radius: 0% 0% 15% 15%;
 }
@@ -148,6 +143,7 @@ p {
 
 .card-body {
   background-color: black;
+  width: 700px;
 }
 
 .form-inline {

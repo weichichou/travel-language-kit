@@ -8,9 +8,6 @@ import '../App.css'
 export default class FoodDisplay extends React.Component {
     state = {
         item: '',
-        // region: 'zh-TW',
-        // region: 'ja',
-        // region: 'nl', 
         originalText: '',
         translatedText: '',
         showBottomDiv: false,
@@ -31,12 +28,9 @@ export default class FoodDisplay extends React.Component {
             item: event.target.alt
         })
         this.translate(event.target.alt)
-        // console.log('event.target', event.target)
-        // event.target.className = 'current-img'
     }
 
     makeSentence = (index) => {
-        // const id = event.target.id - 1
         const text = sentences[index].text
         const sentence = text.replace('ITEM', this.state.item)
         this.translate(sentence)
@@ -68,10 +62,10 @@ export default class FoodDisplay extends React.Component {
         
         const output = general.map((item)=>{
             return <div key={item.name}>
-                <img className='' 
-                src={item.imgUrl} alt={item.name}
+                <img src={item.imgUrl} alt={item.name}
                 height='150px' width='200px'
-                onClick={this.handleClick}/>
+                onClick={this.handleClick}
+                tabIndex="0" />
             </div>
         })
 
@@ -79,10 +73,10 @@ export default class FoodDisplay extends React.Component {
             .filter(item => item.region === this.props.region)
             .map((item)=>{
             return <div key={item.name}>
-                <img className='' 
-                src={item.imgUrl} alt={item.name}
+                <img src={item.imgUrl} alt={item.name}
                 height='150px' width='200px'
-                onClick={this.handleClick}/>
+                onClick={this.handleClick}
+                tabIndex="0" />
             </div>
         })
 
