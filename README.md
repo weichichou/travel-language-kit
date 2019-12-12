@@ -1,4 +1,4 @@
-# Travel Language Kit 
+# :steam_locomotive: Travel Language Kit  :ramen: 
 
 ## Introduction
 
@@ -7,39 +7,35 @@ The APP is designed for travellers in foreign countries to communicate with the 
 
 ## Table of Contents
 
-- **[Technologies Used](#technologies-used)**
+- **Demo**
 - **[Main Functions](#main-functions)**
-
-## Technologies Used
-
-- **React**
-- **Google Cloud Translation API**
-- **Web Speech API**
-- **Geolocation API**
-- **Pigeon Maps**
-- **React Canvas Draw**
+  - [Translating](#translating)
+  - [Locating](#locating)
+  - [Drawing](#drawing)
+- **[Technologies Used](#technologies-used)**
 
 ## Main Functions
 
-- **Translating**
+### Translating
 
-    You can point to a food image, and get the translation in both text and speech formats.
-    
-    You can choose from several frequently used sentences. (Ordering, asking for price, paying by card / in cash, etc.)
+- You can point to a food image, and get the translation in both text and speech formats.
+- You can choose from several frequently used sentences. (Ordering, asking for price, paying by card / in cash, etc.)
+- You can customize the sentences. For example, let the chef / shop owner know about your food allergy before ordering. 
 
-    You can customize the sentences. For example, let the chef / shop owner know about your food allergy before ordering. 
+### Locating
 
-- **Locating**
+- You can get the current location (detected by GPS).
+- You can choose a location from the map.
+- The targeted language for translation will be changed instantly based on the location you've chosen.
 
-    You can get the current location (detected by GPS).
+### Drawing
 
-    You can choose a location from the map.
+- You can also describe to the locals what you'd like to buy by drawing a picture.
 
-    The targeted language for translation will be changed instantly based on the location you've chosen.
+## Technologies Used
 
-- **Drawing**
+- **Google Cloud Translation API**
+- **Web Speech API**
+- **Geolocation API**
 
-    You can also describe to the locals what you'd like to buy by drawing a picture.
-
-
-
+This project was scaffolded using the create-react-app cli. [See the standard create-react-app docs](./create-react-app-docs.md).
