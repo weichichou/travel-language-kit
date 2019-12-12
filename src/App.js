@@ -11,6 +11,10 @@ class App extends React.Component {
         region: 'nl'
     }
 
+    changeRegion = (event) => {
+        this.setState({region: event.target.id})
+    }
+
     getLocation = () => {
         navigator.geolocation.getCurrentPosition((position) => {
           console.log(position)
@@ -42,8 +46,8 @@ class App extends React.Component {
                     <button className="dropdown-item">Choose from map</button>
                     <div className="dropdown-divider"></div>
                     <button className="dropdown-item disabled">Frequently visited</button>
-                    <button className="dropdown-item">Taiwan</button>
-                    <button className="dropdown-item">Japan</button>
+                    <button onClick={this.changeRegion} id='zh-TW' className="dropdown-item">Taiwan</button>
+                    <button onClick={this.changeRegion} id='ja' className="dropdown-item">Japan</button>
                 </div>
                 </div>
             </div>

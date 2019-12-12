@@ -70,6 +70,7 @@ img:active {
   padding-bottom: 1rem;
   width: 500px;
   margin: 0 auto;
+  border-radius: 0 0 1rem 1rem;
 }
 
 .sticky-bottom {
@@ -115,6 +116,7 @@ p {
 .button-div {
   width: 500px;
   margin: 0 auto;
+  border-radius: 0% 0% 15% 15%;
 }
 
 .button-div button {
