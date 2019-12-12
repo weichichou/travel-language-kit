@@ -1,3 +1,21 @@
+.map-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+}
+
+.map-div button {
+  margin: 0.5rem;
+}
+
+.map-div p{
+  color: white;
+}
 
 .container {
   display: flex;
@@ -26,6 +44,14 @@ img:active {
 /* .current-img {
   filter: drop-shadow(-15px -15px 20px pink);
 } */
+
+.dropdown-item {
+  font-size: 18px;
+}
+
+.dropdown-item:hover {
+  background: linear-gradient(white, pink, pink, pink, white);
+}
 
 .food-display {
   color: white;
@@ -60,6 +86,9 @@ img:active {
   top: 111px !important;
   background-color: black;
   padding-bottom: 1rem;
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 0 0 1rem 1rem;
 }
 
 .sticky-bottom {
@@ -100,6 +129,12 @@ p {
 .header-div h1 {
   margin: 0;
   padding: 2rem;
+}
+
+.button-div {
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 0% 0% 15% 15%;
 }
 
 .button-div button {
