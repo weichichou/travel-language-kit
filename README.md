@@ -1,4 +1,4 @@
-# :steam_locomotive: Travel Language Kit :ramen: 
+# :airplane: Travel Language Kit :ramen: 
 
 ## Introduction
 
