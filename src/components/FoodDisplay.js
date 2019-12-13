@@ -1,9 +1,10 @@
 import React from "react"
+import { Link } from 'react-router-dom'
 import { googleTranslate } from '../utils/googleTranslate'
+import '../App.css'
 import { general } from '../generalfood'
 import { local } from '../localfood'
 import { sentences } from '../sentences'
-import '../App.css'
 
 export default class FoodDisplay extends React.Component {
     state = {
@@ -178,7 +179,9 @@ export default class FoodDisplay extends React.Component {
                 </div>
             </div>
 
-            {/* <div>Image Credit!!</div> */}
+            <Link to='/img-attribute'>
+                <h6 className='footer' >Go to image attribution</h6>
+            </Link>
 
             <div className='sticky-bottom'>
 

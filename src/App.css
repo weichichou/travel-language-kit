@@ -175,6 +175,17 @@ p {
   margin: 0.5rem;
 }
 
+.footer {
+  margin-top: 3rem;
+  color: white;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.footer:hover{
+  color: pink
+}
+
 
 /* Default from React */
 .App {
