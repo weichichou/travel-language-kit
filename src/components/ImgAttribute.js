@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import { local } from '../localfood'
 
 export default class ImgAttribute extends React.Component {
-    
-    
     render(){
         const output = local
         .filter((item)=> item.hasOwnProperty("CC") === true)
@@ -22,14 +20,16 @@ export default class ImgAttribute extends React.Component {
                 <button className='btn btn-dark btn-lg'>Close</button>
             </Link>
             <h3>Image Attribution</h3>
-            <h5>Images that are not listed below are downloaded from <a href='https://www.pexels.com/'>Pexels</a>,</h5>
+            <h5>Images that are not listed below are downloaded from 
+                <a href='https://www.pexels.com/'>Pexels</a>,
+            </h5>
             <h5> where all photos are free to use and attribution are not required.</h5>
-            <h5 className='pexelLink' > <a href='https://www.pexels.com/photo-license/'> See photo license on Pexels</a>.</h5>
-            
+            <h5 className='pexelLink'>
+                <a href='https://www.pexels.com/photo-license/'> See photo license on Pexels</a>.
+            </h5>
             <div>
                 {output}
             </div>
-        
         </div>)
     }
 }
