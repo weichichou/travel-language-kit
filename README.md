@@ -7,7 +7,7 @@ The APP is designed for travellers in foreign countries to communicate with the 
 
 ## Table of Contents
 
-- **[Demo](./demo/demo-travel-language-kit.mp4)**
+- **[Introduction](#introduction)**
 - **[Main Functions](#main-functions)**
   - [Translating](#translating)
   - [Locating](#locating)
