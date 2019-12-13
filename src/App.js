@@ -5,6 +5,7 @@ import Map from 'pigeon-maps';
 import Canvas from './components/Canvas';
 import FoodDisplay from './components/FoodDisplay';
 import { coordinates } from './coordinates'
+import ImgAttribute from './components/ImgAttribute';
 
 class App extends React.Component {  
     state = {
@@ -88,6 +89,7 @@ class App extends React.Component {
                 <FoodDisplay region={this.state.region}/>} 
             />
             <Route path='/canvas' component={Canvas} />
+            <Route path='/img-attribute' component={ImgAttribute} />
         </div>
         </Router>)
     }

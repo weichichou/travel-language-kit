@@ -175,6 +175,35 @@ p {
   margin: 0.5rem;
 }
 
+.footer {
+  margin-top: 3rem;
+  color: white;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.footer:hover{
+  color: pink
+}
+
+.img-attribute h3 {
+  color: white;
+  margin: 2rem;
+}
+
+.img-attribute h5 {
+  color: white;
+}
+
+.pexelLink {
+  margin-bottom: 5rem;
+}
+
+.img-attribute p {
+  color: white;
+  font-size: 18px;
+}
+
 
 /* Default from React */
 .App {
