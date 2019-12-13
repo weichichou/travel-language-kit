@@ -11,7 +11,7 @@ export default class ImgAttribute extends React.Component {
                 <img src={item.imgUrl} alt={item.name} width='200px'/>
                 <p>
                     By <a href={item.link}>{item.author}</a>
-                    , is licensed under <a href={item.CClink}>{item.CC}</a>
+                    , is licensed under <a href={item.CClink}>{`CC ${item.CC}`}</a>
                 </p>
             </div>
         })
