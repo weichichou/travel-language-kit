@@ -177,6 +177,9 @@ export default class FoodDisplay extends React.Component {
                     {localOutput}
                 </div>
             </div>
+
+            {/* <div>Image Credit!!</div> */}
+
             <div className='sticky-bottom'>
 
                 {this.state.showBottomDiv === false && 

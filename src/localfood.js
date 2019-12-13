@@ -15,19 +15,21 @@ export const local = [
         "region": "nl",
         "name": "cheese",
         "imgUrl": "images/Cheese.jpg"
-    }, {
+    }, /* {
         "region": "nl",
         "name": "stroopwafel",
         "imgUrl": "images/Stroopwafel.jpg"
-    },  {
+    }, */ 
+     {
         "region": "zh-TW",
         "name": "beef noodles",
         "imgUrl": "images/beef-noodles2.jpg"
-    }, {
+    }, /* {
         "region": "zh-TW",
         "name": "scallion pancakes",
         "imgUrl": "images/scallion-pancakes.jpg"
-    }, {
+    }, */ 
+    {
         "region": "zh-TW",
         "name": "stinky tofu",
         "imgUrl": "images/Stinky-tofu.jpg"
@@ -48,11 +50,12 @@ export const local = [
         "region": "ja",
         "name": "sushi",
         "imgUrl": "images/sushi.jpg"
-    }, {
+    }, /* {
         "region": "ja",
         "name": "sashimi",
         "imgUrl": "images/sashimi.jpg"
-    }, {
+    },  */
+    {
         "region": "ja",
         "name": "ramen",
         "imgUrl": "images/ramen.jpg"

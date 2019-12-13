@@ -6,6 +6,7 @@
   width: 650px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 300px;
   padding: 2rem;
 }
 
@@ -25,7 +26,7 @@
 }
 
 .container div {
-  margin: 0.5rem;
+  margin: 1rem;
 }
 
 .container div img {
@@ -34,15 +35,15 @@
 
 img:hover {
   cursor: pointer;
-  filter: drop-shadow(-15px -15px 20px pink);
+  filter: drop-shadow(15px 15px 20px pink);
 }
 
 img:active {
-  filter: drop-shadow(-15px -15px 20px pink);
+  filter: drop-shadow(15px 15px 20px pink);
 }
 
 img:focus {
-  filter: drop-shadow(-15px -15px 20px pink);
+  filter: drop-shadow(15px 15px 20px pink);
   outline: 0;
 }
 
@@ -60,7 +61,8 @@ img:focus {
 }
 
 .food-display h3 {
-  padding-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .allergy-div {
@@ -75,7 +77,7 @@ img:focus {
 }
 
 .collapse {
-  width: 800px;
+  width: 900px;
   margin: 0 auto;
 }
 
@@ -90,13 +92,10 @@ img:focus {
   position: sticky !important;
   top: 111px !important;
   background-color: black;
-  /* background-color: #343a40; */
-  /* padding-bottom: 1rem;
-  padding-top: 1rem; */
-  width: 700px;
+  width: 900px;
   margin: 0 auto;
-  border-radius: 1rem;
-  box-shadow: 0px 5px 30px 15px white;
+  /* border-radius: 0 0 1rem 1rem;  */
+  /* box-shadow: 0px 24px 14px -18px white; */
 }
 
 .sticky-bottom {
@@ -134,7 +133,7 @@ p {
 }
 
 .button-div {
-  width: 700px;
+  width: 900px;
   margin: 0 auto;
   border-radius: 0% 0% 15% 15%;
 }
@@ -150,7 +149,7 @@ p {
 
 .card-body {
   background-color: black;
-  width: 700px;
+  width: 900px;
   border-radius: 1rem;
 }
 

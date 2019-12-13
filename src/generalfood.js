@@ -17,22 +17,34 @@ export const general = [
         "imgUrl": "/images/orange-juice.jpg"
     }, {
         "id": 5,
-        "name": "salade",
-        "imgUrl": "/images/salade2.jpg"
+        "name": "carrot",
+        "imgUrl": "/images/carrot.jpg"
     }, {
         "id": 6,
+        "name": "green-bell-pepper",
+        "imgUrl": "/images/green-bell-pepper.jpg"
+    }, {
+        "id": 7,
+        "name": "tomato",
+        "imgUrl": "/images/tomato.jpg"
+    }, {
+        "id": 8,
+        "name": "mushroom",
+        "imgUrl": "/images/mushroom.jpg"
+    }, {
+        "id": 9,
         "name": "beef",
         "imgUrl": "/images/beef.jpg"
     }, {
-        "id": 7,
+        "id": 10,
         "name": "pork",
         "imgUrl": "/images/pork.jpg"
     }, {
-        "id": 8,
-        "name": "chicken",
+        "id": 11,
+        "name": "chicken meat",
         "imgUrl": "/images/chicken.jpg"
     }, {
-        "id": 9,
+        "id": 12,
         "name": "fish",
         "imgUrl": "/images/fish.jpg"
     }
